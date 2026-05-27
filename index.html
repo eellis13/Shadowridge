@@ -1,0 +1,1790 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>SHADOWRIDGE</title>
+
+<!-- ── PWA / HOME SCREEN META ── -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="SHADOWRIDGE">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#04030C">
+<meta name="description" content="Shadowridge Fight Camp — Amateur Boxing Training System">
+
+<!-- ── APPLE HOME SCREEN ICON (embedded SVG as base64) ── -->
+<link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiI+CiAgPGRlZnM+CiAgICA8cmFkaWFsR3JhZGllbnQgaWQ9ImJnIiBjeD0iNTAlIiBjeT0iNDAlIiByPSI2NSUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMkExNDY4Ii8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzA0MDMwQyIvPgogICAgPC9yYWRpYWxHcmFkaWVudD4KICAgIDxyYWRpYWxHcmFkaWVudCBpZD0iZ2xvdyIgY3g9IjUwJSIgY3k9IjUwJSIgcj0iNTAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzkwNjBGMCIgc3RvcC1vcGFjaXR5PSIwLjUiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjOTA2MEYwIiBzdG9wLW9wYWNpdHk9IjAiLz4KICAgIDwvcmFkaWFsR3JhZGllbnQ+CiAgICA8ZmlsdGVyIGlkPSJibHVyIj4KICAgICAgPGZlR2F1c3NpYW5CbHVyIHN0ZERldmlhdGlvbj0iOCIvPgogICAgPC9maWx0ZXI+CiAgICA8ZmlsdGVyIGlkPSJnbG93LWZpbHRlciI+CiAgICAgIDxmZUdhdXNzaWFuQmx1ciBzdGREZXZpYXRpb249IjMiIHJlc3VsdD0iYmx1ciIvPgogICAgICA8ZmVNZXJnZT48ZmVNZXJnZU5vZGUgaW49ImJsdXIiLz48ZmVNZXJnZU5vZGUgaW49IlNvdXJjZUdyYXBoaWMiLz48L2ZlTWVyZ2U+CiAgICA8L2ZpbHRlcj4KICA8L2RlZnM+CgogIDwhLS0gQmFja2dyb3VuZCAtLT4KICA8cmVjdCB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgcng9IjEwMCIgZmlsbD0idXJsKCNiZykiLz4KCiAgPCEtLSBTdWJ0bGUgY29ybmVyIGNyYWNrIGxpbmVzIC0tPgogIDxwYXRoIGQ9Ik00MjAgMCBMNDAwIDgwIEw0MjUgMTMwIiBzdHJva2U9InJnYmEoMTQ0LDgwLDI1NSwwLjEyKSIgc3Ryb2tlLXdpZHRoPSIyIiBmaWxsPSJub25lIi8+CiAgPHBhdGggZD0iTTAgMzAwIEw1MCAzNDAgTDMwIDQwMCIgc3Ryb2tlPSJyZ2JhKDE0NCw4MCwyNTUsMC4xKSIgc3Ryb2tlLXdpZHRoPSIyIiBmaWxsPSJub25lIi8+CgogIDwhLS0gUHVycGxlIGdsb3cgb3JiIGJlaGluZCBleWUgLS0+CiAgPGVsbGlwc2UgY3g9IjI1NiIgY3k9IjIxMCIgcng9IjEyMCIgcnk9IjEwMCIgZmlsbD0idXJsKCNnbG93KSIgZmlsdGVyPSJ1cmwoI2JsdXIpIi8+CgogIDwhLS0gRXllIHN5bWJvbCAtIG91dGVyIHJpbmcgLS0+CiAgPGNpcmNsZSBjeD0iMjU2IiBjeT0iMjEwIiByPSI4OCIgc3Ryb2tlPSIjQjA4MEZGIiBzdHJva2Utd2lkdGg9IjMiIGZpbGw9Im5vbmUiIG9wYWNpdHk9IjAuOSIgZmlsdGVyPSJ1cmwoI2dsb3ctZmlsdGVyKSIvPgoKICA8IS0tIEV5ZSBzeW1ib2wgLSBtaWRkbGUgcmluZyAtLT4KICA8Y2lyY2xlIGN4PSIyNTYiIGN5PSIyMTAiIHI9IjU2IiBzdHJva2U9IiM5MDYwRjAiIHN0cm9rZS13aWR0aD0iMiIgZmlsbD0ibm9uZSIgb3BhY2l0eT0iMC43Ii8+CgogIDwhLS0gRXllIHN5bWJvbCAtIGlyaXMgZmlsbCAtLT4KICA8Y2lyY2xlIGN4PSIyNTYiIGN5PSIyMTAiIHI9IjM0IiBmaWxsPSIjNTAzMEIwIiBvcGFjaXR5PSIwLjkiLz4KCiAgPCEtLSBFeWUgc3ltYm9sIC0gcHVwaWwgLS0+CiAgPGNpcmNsZSBjeD0iMjU2IiBjeT0iMjEwIiByPSIxNiIgZmlsbD0iI0IwODBGRiIgZmlsdGVyPSJ1cmwoI2dsb3ctZmlsdGVyKSIvPgoKICA8IS0tIEhvcml6b250YWwgbGluZSB0aHJvdWdoIGV5ZSAtLT4KICA8bGluZSB4MT0iMTQ4IiB5MT0iMjEwIiB4Mj0iMzY0IiB5Mj0iMjEwIiBzdHJva2U9IiNCMDgwRkYiIHN0cm9rZS13aWR0aD0iMiIgb3BhY2l0eT0iMC42Ii8+CgogIDwhLS0gQ29ybmVyIGJyYWNrZXQgYWNjZW50cyAtLT4KICA8cGF0aCBkPSJNNjAgNjAgTDYwIDEwMCBNNjAgNjAgTDEwMCA2MCIgc3Ryb2tlPSIjQjA4MEZGIiBzdHJva2Utd2lkdGg9IjMiIGZpbGw9Im5vbmUiIG9wYWNpdHk9IjAuNyIvPgogIDxwYXRoIGQ9Ik00NTIgNjAgTDQ1MiAxMDAgTTQ1MiA2MCBMNDEyIDYwIiBzdHJva2U9IiNCMDgwRkYiIHN0cm9rZS13aWR0aD0iMyIgZmlsbD0ibm9uZSIgb3BhY2l0eT0iMC43Ii8+CiAgPHBhdGggZD0iTTYwIDQ1MiBMNjAgNDEyIE02MCA0NTIgTDEwMCA0NTIiIHN0cm9rZT0iI0IwODBGRiIgc3Ryb2tlLXdpZHRoPSIzIiBmaWxsPSJub25lIiBvcGFjaXR5PSIwLjciLz4KICA8cGF0aCBkPSJNNDUyIDQ1MiBMNDUyIDQxMiBNNDUyIDQ1MiBMNDEyIDQ1MiIgc3Ryb2tlPSIjQjA4MEZGIiBzdHJva2Utd2lkdGg9IjMiIGZpbGw9Im5vbmUiIG9wYWNpdHk9IjAuNyIvPgoKICA8IS0tIFNSIHdvcmRtYXJrIC0tPgogIDx0ZXh0IHg9IjI1NiIgeT0iMzYwIiBmb250LWZhbWlseT0iQXJpYWwgQmxhY2ssIHNhbnMtc2VyaWYiIGZvbnQtd2VpZ2h0PSI5MDAiIGZvbnQtc2l6ZT0iOTYiIGZpbGw9IiNFREU4RkYiCiAgICB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBsZXR0ZXItc3BhY2luZz0iOCIgZmlsdGVyPSJ1cmwoI2dsb3ctZmlsdGVyKSI+U1I8L3RleHQ+CgogIDwhLS0gU0hBRE9XUklER0UgbGFiZWwgLS0+CiAgPHRleHQgeD0iMjU2IiB5PSI0MjAiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC13ZWlnaHQ9IjcwMCIgZm9udC1zaXplPSIyMiIgZmlsbD0iIzcwNDhEMCIKICAgIHRleHQtYW5jaG9yPSJtaWRkbGUiIGxldHRlci1zcGFjaW5nPSI2Ij5TSEFET1dSSURHRTwvdGV4dD4KCiAgPCEtLSBCb3R0b20gZ2xvdyBsaW5lIC0tPgogIDxsaW5lIHgxPSIxNTYiIHkxPSI0MzgiIHgyPSIzNTYiIHkyPSI0MzgiIHN0cm9rZT0iIzUwMzBCMCIgc3Ryb2tlLXdpZHRoPSIxIiBvcGFjaXR5PSIwLjYiLz4KPC9zdmc+">
+
+<!-- Favicon for browser tab -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%232A1468'/><circle cx='50' cy='42' r='22' stroke='%23B080FF' stroke-width='3' fill='none'/><circle cx='50' cy='42' r='8' fill='%23B080FF'/><line x1='22' y1='42' x2='78' y2='42' stroke='%23B080FF' stroke-width='2' opacity='0.6'/><text x='50' y='82' font-family='Arial Black' font-weight='900' font-size='24' fill='%23EDE8FF' text-anchor='middle'>SR</text></svg>">
+
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=UnifrakturMaguntia&family=Space+Grotesk:wght@300;500;700&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet">
+<style>
+/* ── RESET — override everything ── */
+html, body, div, span, p, h1, h2, h3, input, select, textarea, button, label, canvas {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  background-color: #04030C !important;
+}
+
+body {
+  background-color: #04030C !important;
+  background: #04030C !important;
+  color: #EDE8FF !important;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.7;
+  min-height: 100vh;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── BACKGROUND GLOW ── */
+.bg-wrap {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background: #04030C;
+  overflow: hidden;
+}
+.bg-glow {
+  position: absolute;
+  width: 900px;
+  height: 700px;
+  top: -400px;
+  right: -350px;
+  border-radius: 50%;
+  background: radial-gradient(ellipse at center, rgba(70,20,160,0.22) 0%, transparent 65%);
+}
+.bg-crack {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.45;
+}
+
+/* ── LAYOUT ── */
+.app {
+  position: relative;
+  z-index: 1;
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 0 20px 100px;
+  background: transparent;
+}
+
+/* ── PANEL — core container ── */
+.panel {
+  background-color: #0C0A1E;
+  border: 1px solid rgba(100,55,220,0.5);
+  border-radius: 4px;
+  position: relative;
+}
+.panel-glow {
+  position: absolute;
+  inset: -1px;
+  border-radius: 4px;
+  box-shadow: 0 0 8px rgba(144,80,255,0.25);
+  pointer-events: none;
+}
+/* Corner bracket accents */
+.panel .c-tl,
+.panel .c-tr,
+.panel .c-bl,
+.panel .c-br {
+  position: absolute;
+  width: 11px;
+  height: 11px;
+}
+.panel .c-tl { top: -1px; left: -1px; border-top: 2px solid #B080FF; border-left: 2px solid #B080FF; box-shadow: -2px -2px 6px rgba(176,128,255,0.5); }
+.panel .c-tr { top: -1px; right: -1px; border-top: 2px solid #B080FF; border-right: 2px solid #B080FF; box-shadow: 2px -2px 6px rgba(176,128,255,0.5); }
+.panel .c-bl { bottom: -1px; left: -1px; border-bottom: 2px solid #B080FF; border-left: 2px solid #B080FF; box-shadow: -2px 2px 6px rgba(176,128,255,0.5); }
+.panel .c-br { bottom: -1px; right: -1px; border-bottom: 2px solid #B080FF; border-right: 2px solid #B080FF; box-shadow: 2px 2px 6px rgba(176,128,255,0.5); }
+
+/* Panel label bar */
+.panel-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 18px;
+  border-bottom: 1px solid rgba(100,55,220,0.2);
+  background-color: rgba(80,48,176,0.1);
+  border-radius: 4px 4px 0 0;
+}
+.panel-bar-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #B080FF;
+  box-shadow: 0 0 6px rgba(176,128,255,0.8);
+  flex-shrink: 0;
+}
+.panel-bar-label {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 9px;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: #C0A8F0;
+}
+.panel-bar-right {
+  margin-left: auto;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #5A4E80;
+}
+
+.panel-body {
+  padding: 20px 22px;
+}
+
+/* ── HEADER ── */
+.header {
+  padding: 36px 0 24px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid rgba(100,55,220,0.2);
+  position: relative;
+}
+.header::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 180px;
+  height: 1px;
+  background: linear-gradient(90deg, #B080FF, transparent);
+  box-shadow: 0 0 8px rgba(176,128,255,0.6);
+}
+.header-top {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 0;
+}
+.logo-gothic {
+  font-family: 'UnifrakturMaguntia', serif;
+  font-size: 14px;
+  color: #7048D0;
+  display: block;
+  line-height: 1;
+  margin-bottom: -2px;
+}
+.logo-name {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 60px;
+  color: #EDE8FF;
+  letter-spacing: 0.06em;
+  line-height: 0.9;
+  text-shadow: 0 0 20px rgba(144,80,255,0.4), 0 0 40px rgba(112,64,208,0.2);
+  display: block;
+}
+.logo-sub {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 500;
+  font-size: 9px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #5A4E80;
+  display: block;
+  margin-top: 5px;
+}
+.hdr-record {
+  text-align: right;
+}
+.hdr-record-num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 44px;
+  color: #EDE8FF;
+  letter-spacing: 0.08em;
+  line-height: 1;
+}
+.hdr-record-lbl {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #5A4E80;
+  margin-top: 3px;
+}
+
+/* Header meta strip */
+.header-strip {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  flex-wrap: wrap;
+  padding-top: 18px;
+  margin-top: 18px;
+  border-top: 1px solid rgba(100,55,220,0.2);
+}
+.strip-block {
+  display: flex;
+  flex-direction: column;
+  padding-right: 28px;
+  margin-right: 28px;
+  border-right: 1px solid rgba(100,55,220,0.2);
+}
+.strip-block:last-child {
+  border-right: none;
+  margin-right: 0;
+  padding-right: 0;
+  margin-left: auto;
+  align-items: flex-end;
+}
+.strip-lbl {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 8px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #5A4E80;
+  display: block;
+  margin-bottom: 4px;
+}
+.strip-val {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 26px;
+  color: #EDE8FF;
+  letter-spacing: 0.04em;
+  line-height: 1;
+  display: block;
+}
+.strip-val.purple {
+  color: #B080FF;
+  text-shadow: 0 0 10px rgba(176,128,255,0.3);
+}
+.strip-sub {
+  font-size: 10px;
+  color: #5A4E80;
+  display: block;
+  margin-top: 2px;
+}
+/* Countdown */
+.countdown {
+  background-color: #1A0E3C;
+  border: 1px solid rgba(120,70,240,0.5);
+  border-radius: 3px;
+  padding: 10px 18px;
+  text-align: center;
+  box-shadow: 0 0 8px rgba(144,80,255,0.2);
+}
+.cd-num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 34px;
+  color: #B080FF;
+  letter-spacing: 0.04em;
+  line-height: 1;
+  text-shadow: 0 0 12px rgba(176,128,255,0.5);
+}
+.cd-lbl {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 8px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #5A4E80;
+  margin-top: 3px;
+}
+
+/* ── TABS ── */
+.tabs {
+  display: flex;
+  gap: 0;
+  margin-bottom: 30px;
+  border-bottom: 1px solid rgba(100,55,220,0.2);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.tabs::-webkit-scrollbar { display: none; }
+.tab-btn {
+  padding: 10px 14px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #5A4E80;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  cursor: pointer;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+.tab-btn:hover { color: #C0A8F0; }
+.tab-btn.on {
+  color: #B080FF;
+  border-bottom-color: #B080FF;
+  text-shadow: 0 0 8px rgba(176,128,255,0.4);
+}
+.pane { display: none; }
+.pane.on { display: block; }
+
+/* ── SECTION HEADING ── */
+.sec-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+  margin-top: 30px;
+}
+.sec-head:first-child { margin-top: 0; }
+.sec-n {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  color: #B080FF;
+}
+.sec-t {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 9px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #5A4E80;
+}
+.sec-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(120,70,240,0.4), transparent);
+}
+
+/* ── STAT GRID ── */
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-bottom: 16px;
+}
+.stat-box {
+  background-color: #0C0A1E;
+  border: 1px solid rgba(100,55,220,0.3);
+  border-radius: 4px;
+  padding: 16px 16px 14px;
+  position: relative;
+}
+.stat-box::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  border-radius: 4px 4px 0 0;
+  background-color: #5030B0;
+}
+.stat-box.b-blue::before { background-color: #5090D8; }
+.stat-box.b-green::before { background-color: #40C878; }
+.stat-box.b-pink::before { background-color: #C06898; }
+.stat-lbl {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 8px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #5A4E80;
+  display: block;
+  margin-bottom: 7px;
+}
+.stat-val {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 34px;
+  color: #EDE8FF;
+  letter-spacing: 0.03em;
+  line-height: 1;
+  display: block;
+}
+.stat-sub {
+  font-size: 10px;
+  color: #3A3558;
+  display: block;
+  margin-top: 4px;
+}
+
+/* ── DAY GRID ── */
+.day-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 8px;
+  margin-bottom: 24px;
+}
+.day-cell {
+  background-color: #0C0A1E;
+  border: 1px solid rgba(100,55,220,0.3);
+  border-radius: 4px;
+  padding: 12px 8px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.day-cell:hover {
+  border-color: rgba(120,70,240,0.6);
+}
+.day-cell.on {
+  background-color: #1A0E3C;
+  border-color: #B080FF;
+  box-shadow: 0 0 12px rgba(144,80,255,0.25);
+}
+.day-cell.done {
+  border-color: rgba(64,200,120,0.4);
+}
+.day-cell.today {
+  border-color: rgba(112,72,208,0.6);
+}
+.dc-name {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 20px;
+  letter-spacing: 0.06em;
+  color: #EDE8FF;
+  line-height: 1;
+  display: block;
+}
+.day-cell.on .dc-name { color: #B080FF; }
+.day-cell.done .dc-name { color: #40C878; }
+.dc-dots {
+  display: flex;
+  gap: 3px;
+  justify-content: center;
+  margin-top: 6px;
+}
+.dc-dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+}
+.dc-dot.boxing { background-color: #B080FF; }
+.dc-dot.run { background-color: #40C878; }
+.dc-dot.strength { background-color: #5090D8; }
+.dc-dot.bag { background-color: #C06898; }
+.dc-tag {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 8px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  display: block;
+  margin-top: 5px;
+  color: #5A4E80;
+}
+.day-cell.done .dc-tag { color: #40C878; }
+.day-cell.today .dc-tag { color: #7048D0; }
+
+/* ── SESSION PANEL ── */
+.session-wrap { margin-bottom: 24px; }
+
+.sinfo-row {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(100,55,220,0.15);
+  font-size: 12px;
+  color: #5A4E80;
+}
+.sinfo-row:last-child { border-bottom: none; }
+.sinfo-lbl {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 8.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #8A70C0;
+  flex-shrink: 0;
+  width: 36px;
+  padding-top: 1px;
+}
+
+/* Tags */
+.tag {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 8px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 3px 9px;
+  border-radius: 2px;
+  display: inline-block;
+}
+.tag-boxing  { background-color: rgba(112,72,208,0.2); color: #B080FF; border: 1px solid rgba(144,80,255,0.4); }
+.tag-strength{ background-color: rgba(80,144,216,0.12); color: #80B8F8; border: 1px solid rgba(80,144,216,0.3); }
+.tag-run     { background-color: rgba(64,200,120,0.1);  color: #60D890; border: 1px solid rgba(64,200,120,0.25); }
+.tag-bag     { background-color: rgba(192,104,152,0.12);color: #D898C0; border: 1px solid rgba(192,104,152,0.28); }
+.tag-mma     { background-color: rgba(112,72,208,0.2); color: #B080FF; border: 1px solid rgba(144,80,255,0.4); }
+
+/* Session tags row */
+.s-tags { display: flex; gap: 5px; flex-wrap: wrap; margin-bottom: 14px; }
+
+/* ── GEN BUTTON ── */
+.gen-btn {
+  width: 100%;
+  padding: 15px;
+  background-color: #1A0E3C;
+  border: 1px solid #B080FF;
+  color: #B080FF;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 22px;
+  letter-spacing: 0.14em;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: all 0.15s;
+  margin-top: 14px;
+  box-shadow: 0 0 10px rgba(144,80,255,0.15);
+}
+.gen-btn:hover {
+  background-color: #2E1870;
+  box-shadow: 0 0 20px rgba(144,80,255,0.35);
+  color: #EDE8FF;
+}
+.gen-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+
+/* ── ROUND LIST ── */
+.round-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin: 14px 0;
+}
+.round-row {
+  display: flex;
+  align-items: stretch;
+  background-color: #110F28;
+  border: 1px solid rgba(100,55,220,0.25);
+  border-radius: 3px;
+  overflow: hidden;
+}
+.round-row:hover { border-color: rgba(100,55,220,0.5); }
+.round-row.is-rest { opacity: 0.7; }
+.round-n {
+  width: 46px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(80,48,176,0.18);
+  border-right: 1px solid rgba(100,55,220,0.25);
+}
+.round-n span {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 22px;
+  color: #B080FF;
+  letter-spacing: 0.04em;
+  text-shadow: 0 0 8px rgba(176,128,255,0.3);
+}
+.round-row.is-rest .round-n span {
+  color: #5A4E80;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+}
+.round-b { flex: 1; padding: 10px 15px; }
+.round-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  color: #EDE8FF;
+  margin-bottom: 3px;
+}
+.round-detail {
+  font-size: 11px;
+  color: #5A4E80;
+  line-height: 1.6;
+}
+.round-dur {
+  flex-shrink: 0;
+  padding: 0 13px;
+  display: flex;
+  align-items: center;
+  border-left: 1px solid rgba(100,55,220,0.25);
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  color: #3A3558;
+  white-space: nowrap;
+  background-color: rgba(0,0,0,0.15);
+}
+
+/* Session coaching note */
+.s-note {
+  font-size: 11px;
+  color: #8A70C0;
+  padding: 11px 15px;
+  font-style: italic;
+  border-left: 2px solid #5030B0;
+  background-color: #1A0E3C;
+  border-radius: 0 3px 3px 0;
+  margin-top: 6px;
+  line-height: 1.65;
+}
+
+/* Action row */
+.act-row {
+  display: flex;
+  gap: 8px;
+  margin-top: 14px;
+  flex-wrap: wrap;
+}
+.done-mark {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  color: #40C878;
+  padding: 10px 0;
+  border-top: 1px solid rgba(100,55,220,0.2);
+  margin-top: 12px;
+}
+
+/* ── BUTTONS ── */
+.btn {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 9px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding: 9px 18px;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: all 0.15s;
+  border: none;
+}
+.btn-p {
+  background-color: #5030B0;
+  color: #EDE8FF;
+  border: 1px solid #7048D0;
+}
+.btn-p:hover { background-color: #7048D0; box-shadow: 0 0 8px rgba(144,80,255,0.25); }
+.btn-p:disabled { opacity: 0.35; cursor: not-allowed; }
+.btn-g {
+  background-color: rgba(64,200,120,0.1);
+  color: #40C878;
+  border: 1px solid rgba(64,200,120,0.4);
+}
+.btn-g:hover { background-color: rgba(64,200,120,0.2); }
+.btn-ghost {
+  background-color: transparent;
+  color: #5A4E80;
+  border: 1px solid rgba(100,55,220,0.3);
+}
+.btn-ghost:hover { color: #EDE8FF; border-color: #5A4E80; }
+.btn-b {
+  background-color: rgba(80,144,216,0.15);
+  color: #80B8F8;
+  border: 1px solid rgba(80,144,216,0.35);
+}
+.btn-b:hover { background-color: rgba(80,144,216,0.25); }
+
+/* ── INPUTS ── */
+input, select, textarea {
+  background-color: #110F28 !important;
+  background: #110F28 !important;
+  border: 1px solid rgba(100,55,220,0.35) !important;
+  color: #EDE8FF !important;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 300;
+  font-size: 13px;
+  padding: 9px 12px;
+  border-radius: 3px;
+  width: 100%;
+  outline: none;
+}
+input::placeholder, textarea::placeholder { color: #3A3558; }
+input:focus, select:focus, textarea:focus {
+  border-color: rgba(120,70,240,0.7) !important;
+  box-shadow: 0 0 0 2px rgba(112,72,208,0.12);
+}
+select option { background-color: #0C0A1E; color: #EDE8FF; }
+.irow { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.irow input, .irow select { flex: 1; min-width: 100px; }
+
+/* ── PROGRESS ── */
+.prog-list { display: flex; flex-direction: column; gap: 18px; padding: 20px 22px; }
+.prog-top { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 7px; }
+.prog-name {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 9px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #5A4E80;
+}
+.prog-val {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 18px;
+  letter-spacing: 0.04em;
+  color: #EDE8FF;
+}
+.prog-track {
+  height: 3px;
+  background-color: #2E2850;
+  border-radius: 2px;
+  overflow: hidden;
+}
+.prog-fill { height: 100%; border-radius: 2px; transition: width 0.5s ease; }
+.pf-p  { background: linear-gradient(90deg, #5030B0, #B080FF); box-shadow: 0 0 6px rgba(144,80,255,0.4); }
+.pf-b  { background-color: #5090D8; }
+.pf-g  { background-color: #40C878; }
+.pf-pk { background-color: #C06898; }
+
+/* ── FIGHT RECORD ── */
+.rec-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 28px;
+}
+.rec-box {
+  background-color: #0C0A1E;
+  border: 1px solid rgba(100,55,220,0.3);
+  border-radius: 4px;
+  padding: 22px 12px;
+  text-align: center;
+  position: relative;
+}
+.rec-box::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; border-radius: 4px 4px 0 0; }
+.rec-box.w::before { background-color: #40C878; box-shadow: 0 0 8px rgba(64,200,120,0.5); }
+.rec-box.l::before { background-color: #C06898; }
+.rec-box.d::before { background-color: #5A4E80; }
+.rec-num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 58px;
+  line-height: 1;
+  color: #EDE8FF;
+  display: block;
+}
+.rec-box.w .rec-num { color: #40C878; text-shadow: 0 0 16px rgba(64,200,120,0.35); }
+.rec-box.l .rec-num { color: #C06898; }
+.rec-lbl {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 8.5px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #5A4E80;
+  margin-top: 3px;
+  display: block;
+}
+
+/* ── ENTRY ITEMS ── */
+.entry {
+  background-color: #110F28;
+  border: 1px solid rgba(100,55,220,0.25);
+  border-radius: 3px;
+  padding: 12px 16px;
+  margin-bottom: 7px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.entry.fight  { border-left: 3px solid #5030B0; }
+.entry.run    { border-left: 3px solid #5090D8; }
+.entry.log    { border-left: 3px solid #7048D0; }
+.e-badge {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 28px;
+  width: 32px;
+  text-align: center;
+  flex-shrink: 0;
+}
+.e-badge.W { color: #40C878; }
+.e-badge.L { color: #C06898; }
+.e-badge.D { color: #5A4E80; }
+.e-name {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  color: #EDE8FF;
+}
+.e-meta {
+  font-size: 11px;
+  color: #5A4E80;
+  margin-top: 2px;
+  line-height: 1.5;
+}
+.run-stats { display: flex; gap: 18px; margin-left: auto; }
+.r-stat { text-align: center; }
+.r-val {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 20px;
+  color: #80B8F8;
+  letter-spacing: 0.04em;
+  line-height: 1;
+  display: block;
+}
+.r-lbl {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 8px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #5A4E80;
+  display: block;
+}
+
+/* ── SCHEDULE ── */
+.sched-card {
+  background-color: #0C0A1E;
+  border: 1px solid rgba(100,55,220,0.3);
+  border-radius: 4px;
+  margin-bottom: 8px;
+  overflow: hidden;
+}
+.sched-toggle {
+  width: 100%;
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: background 0.15s;
+  background: transparent;
+  border: none;
+  text-align: left;
+}
+.sched-toggle:hover { background-color: rgba(80,48,176,0.08); }
+.sched-day {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 20px;
+  letter-spacing: 0.05em;
+  color: #EDE8FF;
+  display: block;
+}
+.sched-sub { font-size: 11px; color: #5A4E80; margin-top: 2px; display: block; }
+.sched-icon {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: #5A4E80;
+  line-height: 1;
+  transition: transform 0.2s;
+}
+.sched-icon.open { transform: rotate(45deg); color: #B080FF; }
+.sched-body {
+  display: none;
+  padding: 0 18px 16px;
+  border-top: 1px solid rgba(100,55,220,0.15);
+}
+.sched-body.open { display: block; }
+.sched-line {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 9px 0;
+  border-bottom: 1px solid rgba(100,55,220,0.12);
+  font-size: 12px;
+  color: #5A4E80;
+}
+.sched-line:last-of-type { border-bottom: none; }
+.sched-lbl {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 8.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #8A70C0;
+  flex-shrink: 0;
+  width: 40px;
+  padding-top: 1px;
+}
+
+/* ── AI LOADING ── */
+.loading {
+  background-color: #1A0E3C;
+  border: 1px solid rgba(120,70,240,0.5);
+  border-radius: 3px;
+  padding: 20px;
+  text-align: center;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 9px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #B080FF;
+  margin-top: 14px;
+}
+.loading::after { content: ''; animation: ell 1s infinite; }
+@keyframes ell { 0%{content:'·'}33%{content:'··'}66%{content:'···'} }
+
+/* ── EMPTY ── */
+.empty {
+  border: 1px dashed rgba(100,55,220,0.25);
+  border-radius: 4px;
+  padding: 32px;
+  text-align: center;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #3A3558;
+  margin-bottom: 10px;
+}
+
+/* ── CHART ── */
+.chart-wrap { padding: 18px 22px; }
+.chart-lbl {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 8px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #5A4E80;
+  margin-bottom: 12px;
+  display: block;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 640px) {
+  .stat-grid { grid-template-columns: repeat(2, 1fr); }
+  .day-grid { grid-template-columns: repeat(3, 1fr); }
+  .logo-name { font-size: 44px; }
+  .hdr-record-num { font-size: 32px; }
+  .strip-val { font-size: 20px; }
+  .header-strip { gap: 12px; }
+  .strip-block { padding-right: 16px; margin-right: 16px; }
+  .rec-grid { grid-template-columns: repeat(3, 1fr); }
+  .app { padding: 0 14px 100px; }
+}
+</style>
+</head>
+<body>
+
+<!-- BG -->
+<div class="bg-wrap">
+  <div class="bg-glow"></div>
+  <svg class="bg-crack" viewBox="0 0 880 1000" fill="none" preserveAspectRatio="xMidYMid slice">
+    <path d="M780 0 L758 95 L788 155 L762 275" stroke="rgba(144,80,255,0.07)" stroke-width="1.5" fill="none"/>
+    <path d="M808 55 L782 128 L798 188" stroke="rgba(144,80,255,0.05)" stroke-width="1" fill="none"/>
+    <path d="M0 175 L52 238 L26 316 L68 398" stroke="rgba(144,80,255,0.06)" stroke-width="1.5" fill="none"/>
+    <path d="M855 490 L828 555 L843 615" stroke="rgba(144,80,255,0.04)" stroke-width="1" fill="none"/>
+  </svg>
+</div>
+
+<div class="app">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-top">
+      <div>
+        <span class="logo-gothic">Fight Camp</span>
+        <span class="logo-name">SHADOWRIDGE</span>
+        <span class="logo-sub">Shadow Boxer · 145 lb Class · Amateur · 2025</span>
+      </div>
+      <div class="hdr-record">
+        <div class="hdr-record-num" id="hdr-record">0·0·0</div>
+        <div class="hdr-record-lbl">W · L · D &nbsp;/&nbsp; Goal: 5-0</div>
+      </div>
+    </div>
+
+    <div class="header-strip">
+      <div class="strip-block">
+        <span class="strip-lbl">Date</span>
+        <span class="strip-val" id="hdr-date" style="font-size:22px">—</span>
+      </div>
+      <div class="strip-block">
+        <span class="strip-lbl">Camp Week</span>
+        <span class="strip-val purple" id="hdr-week">1</span>
+        <span class="strip-sub" id="hdr-phase">Base Building</span>
+      </div>
+      <div class="strip-block">
+        <span class="strip-lbl">Weight</span>
+        <span class="strip-val" id="hdr-weight">150.0</span>
+        <span class="strip-sub">lbs · target 145</span>
+      </div>
+      <div class="strip-block">
+        <div class="countdown">
+          <div class="cd-num" id="cd-days">90</div>
+          <div class="cd-lbl">Days to Fight</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- TABS -->
+  <div class="tabs">
+    <button class="tab-btn on"  onclick="showTab('today')">Today</button>
+    <button class="tab-btn"     onclick="showTab('runs')">Runs</button>
+    <button class="tab-btn"     onclick="showTab('schedule')">Schedule</button>
+    <button class="tab-btn"     onclick="showTab('progress')">Progress</button>
+    <button class="tab-btn"     onclick="showTab('fights')">Fights</button>
+    <button class="tab-btn"     onclick="showTab('log')">Log</button>
+    <button class="tab-btn"     onclick="showTab('data')">Data</button>
+  </div>
+
+  <!-- ══ TODAY ══ -->
+  <div class="pane on" id="tab-today">
+
+    <div class="stat-grid">
+      <div class="stat-box">
+        <span class="stat-lbl">Current Weight</span>
+        <span class="stat-val" id="d-weight">150.0</span>
+        <span class="stat-sub">lbs · cut to 145</span>
+      </div>
+      <div class="stat-box b-blue">
+        <span class="stat-lbl">Camp Week</span>
+        <span class="stat-val" id="d-week">1</span>
+        <span class="stat-sub" id="d-phase">Base Building</span>
+      </div>
+      <div class="stat-box b-pink">
+        <span class="stat-lbl">Sessions</span>
+        <span class="stat-val" id="d-sessions">0/8</span>
+        <span class="stat-sub">this week</span>
+      </div>
+      <div class="stat-box b-green">
+        <span class="stat-lbl">Miles Run</span>
+        <span class="stat-val" id="d-miles">0</span>
+        <span class="stat-sub">of 15 target</span>
+      </div>
+    </div>
+
+    <!-- Weight log -->
+    <div class="panel" style="margin-bottom:24px;">
+      <div class="c-tl"></div><div class="c-tr"></div><div class="c-bl"></div><div class="c-br"></div>
+      <div class="panel-bar">
+        <div class="panel-bar-dot"></div>
+        <span class="panel-bar-label">Morning Weight</span>
+        <span class="panel-bar-right" id="weight-status">Log every morning</span>
+      </div>
+      <div class="panel-body" style="padding: 14px 20px;">
+        <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+          <input type="number" id="weight-in" placeholder="lbs" min="130" max="165" step="0.1" style="width:90px;flex:none;"/>
+          <button class="btn btn-p" onclick="logWeight()">Log Weight</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="sec-head">
+      <span class="sec-n">01</span>
+      <span class="sec-t">Select Training Day</span>
+      <div class="sec-line"></div>
+    </div>
+
+    <div class="day-grid" id="day-grid"></div>
+
+    <div class="panel session-wrap" id="session-panel">
+      <div class="c-tl"></div><div class="c-tr"></div><div class="c-bl"></div><div class="c-br"></div>
+      <div class="panel-bar">
+        <div class="panel-bar-dot"></div>
+        <span class="panel-bar-label" id="sess-bar-lbl">Session</span>
+        <span class="panel-bar-right" id="sess-bar-right"></span>
+      </div>
+      <div class="panel-body" id="sess-body">
+        <div class="empty">Select a training day above</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ══ RUNS ══ -->
+  <div class="pane" id="tab-runs">
+    <div class="sec-head" style="margin-top:4px;">
+      <span class="sec-n">01</span>
+      <span class="sec-t">Log a Run</span>
+      <div class="sec-line"></div>
+    </div>
+    <div class="panel" style="margin-bottom:24px;">
+      <div class="c-tl"></div><div class="c-tr"></div><div class="c-bl"></div><div class="c-br"></div>
+      <div class="panel-bar">
+        <div class="panel-bar-dot" style="background-color:#5090D8;box-shadow:none;"></div>
+        <span class="panel-bar-label">MapMyWalk / Manual Entry</span>
+      </div>
+      <div class="panel-body">
+        <p style="font-size:11px;color:#5A4E80;margin-bottom:13px;line-height:1.65;">Paste your MapMyWalk URL or copied workout stats — miles, time, and pace extracted automatically. Or enter manually.</p>
+        <textarea id="run-paste" placeholder="Paste MapMyWalk data here…" style="min-height:44px;resize:none;margin-bottom:10px;font-size:11px;"></textarea>
+        <div style="display:flex;gap:8px;margin-bottom:14px;align-items:center;flex-wrap:wrap;">
+          <button class="btn btn-b" onclick="parseRunPaste()">Parse Paste</button>
+          <span style="font-size:9px;color:#3A3558;letter-spacing:0.12em;font-family:'Space Grotesk',sans-serif;font-weight:700;">OR MANUALLY:</span>
+        </div>
+        <div class="irow">
+          <input type="number" id="run-miles" placeholder="Miles" step="0.01" min="0" max="20"/>
+          <input type="text"   id="run-time"  placeholder="Time (28:42)"/>
+          <input type="text"   id="run-pace"  placeholder="Pace (9:34/mi)"/>
+          <input type="text"   id="run-date-in" placeholder="Date (blank=today)"/>
+          <button class="btn btn-p" onclick="logRunManual()" style="white-space:nowrap;">Log Run</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="sec-head">
+      <span class="sec-n">02</span>
+      <span class="sec-t">Run History</span>
+      <div class="sec-line"></div>
+    </div>
+    <div id="run-history"><div class="empty">No runs logged yet</div></div>
+
+    <div class="panel" style="margin-top:8px;">
+      <div class="c-tl"></div><div class="c-tr"></div><div class="c-bl"></div><div class="c-br"></div>
+      <div class="panel-bar">
+        <div class="panel-bar-dot" style="background-color:#5090D8;box-shadow:none;"></div>
+        <span class="panel-bar-label">Pace Trend · min/mile</span>
+      </div>
+      <div class="chart-wrap">
+        <canvas id="run-chart" height="100"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ SCHEDULE ══ -->
+  <div class="pane" id="tab-schedule">
+    <div class="sec-head" style="margin-top:4px;">
+      <span class="sec-n">01</span>
+      <span class="sec-t">Weekly Structure</span>
+      <div class="sec-line"></div>
+    </div>
+    <div id="sched-list"></div>
+  </div>
+
+  <!-- ══ PROGRESS ══ -->
+  <div class="pane" id="tab-progress">
+    <div class="sec-head" style="margin-top:4px;">
+      <span class="sec-n">01</span>
+      <span class="sec-t">This Week</span>
+      <div class="sec-line"></div>
+    </div>
+    <div class="stat-grid" style="margin-bottom:28px;">
+      <div class="stat-box">
+        <span class="stat-lbl">Sessions</span>
+        <span class="stat-val" id="p-sess">0/8</span>
+        <span class="stat-sub">this week</span>
+      </div>
+      <div class="stat-box b-blue">
+        <span class="stat-lbl">Day Streak</span>
+        <span class="stat-val" id="p-streak">0</span>
+        <span class="stat-sub">days trained</span>
+      </div>
+      <div class="stat-box b-pink">
+        <span class="stat-lbl">All-Time</span>
+        <span class="stat-val" id="p-total">0</span>
+        <span class="stat-sub">total sessions</span>
+      </div>
+      <div class="stat-box b-green">
+        <span class="stat-lbl">Miles</span>
+        <span class="stat-val" id="p-miles">0</span>
+        <span class="stat-sub">this week</span>
+      </div>
+    </div>
+
+    <div class="sec-head">
+      <span class="sec-n">02</span>
+      <span class="sec-t">Weekly Goals</span>
+      <div class="sec-line"></div>
+    </div>
+    <div class="panel" style="margin-bottom:28px;">
+      <div class="c-tl"></div><div class="c-tr"></div><div class="c-bl"></div><div class="c-br"></div>
+      <div class="prog-list">
+        <div><div class="prog-top"><span class="prog-name">Boxing sessions</span><span class="prog-val" id="pv-box">0/4</span></div><div class="prog-track"><div class="prog-fill pf-p" id="pf-box" style="width:0%"></div></div></div>
+        <div><div class="prog-top"><span class="prog-name">Strength days</span><span class="prog-val" id="pv-str">0/2</span></div><div class="prog-track"><div class="prog-fill pf-b" id="pf-str" style="width:0%"></div></div></div>
+        <div><div class="prog-top"><span class="prog-name">Morning runs</span><span class="prog-val" id="pv-run">0/5</span></div><div class="prog-track"><div class="prog-fill pf-g" id="pf-run" style="width:0%"></div></div></div>
+        <div><div class="prog-top"><span class="prog-name">Bag work days</span><span class="prog-val" id="pv-bag">0/2</span></div><div class="prog-track"><div class="prog-fill pf-pk" id="pf-bag" style="width:0%"></div></div></div>
+      </div>
+    </div>
+
+    <div class="sec-head">
+      <span class="sec-n">03</span>
+      <span class="sec-t">Weight Trend</span>
+      <div class="sec-line"></div>
+    </div>
+    <div class="panel">
+      <div class="c-tl"></div><div class="c-tr"></div><div class="c-bl"></div><div class="c-br"></div>
+      <div class="panel-bar">
+        <div class="panel-bar-dot"></div>
+        <span class="panel-bar-label">lbs · last 14 days · target 145</span>
+      </div>
+      <div class="chart-wrap">
+        <canvas id="weight-chart" height="110"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ FIGHTS ══ -->
+  <div class="pane" id="tab-fights">
+    <div class="rec-grid">
+      <div class="rec-box w"><span class="rec-num" id="r-w">0</span><span class="rec-lbl">Wins</span></div>
+      <div class="rec-box l"><span class="rec-num" id="r-l">0</span><span class="rec-lbl">Losses</span></div>
+      <div class="rec-box d"><span class="rec-num" id="r-d">0</span><span class="rec-lbl">Draws</span></div>
+    </div>
+
+    <div class="sec-head">
+      <span class="sec-n">01</span>
+      <span class="sec-t">Log a Fight</span>
+      <div class="sec-line"></div>
+    </div>
+    <div class="panel" style="margin-bottom:28px;">
+      <div class="c-tl"></div><div class="c-tr"></div><div class="c-bl"></div><div class="c-br"></div>
+      <div class="panel-body">
+        <div class="irow">
+          <input type="text" id="f-opp"    placeholder="Opponent name"/>
+          <input type="text" id="f-date"   placeholder="Date (MM/DD/YY)"/>
+          <select id="f-result"><option value="">Result</option><option value="W">Win</option><option value="L">Loss</option><option value="D">Draw</option></select>
+        </div>
+        <div class="irow">
+          <input type="text" id="f-method" placeholder="Method (UD, TKO, KO...)"/>
+          <input type="text" id="f-event"  placeholder="Event / Venue"/>
+        </div>
+        <textarea id="f-notes" placeholder="Notes from the fight…" style="margin-bottom:12px;min-height:52px;resize:vertical;"></textarea>
+        <button class="btn btn-p" onclick="logFight()">Add to Record</button>
+      </div>
+    </div>
+
+    <div class="sec-head">
+      <span class="sec-n">02</span>
+      <span class="sec-t">Fight History</span>
+      <div class="sec-line"></div>
+    </div>
+    <div id="fight-history"><div class="empty">No fights logged yet</div></div>
+  </div>
+
+  <!-- ══ LOG ══ -->
+  <div class="pane" id="tab-log">
+    <div class="sec-head" style="margin-top:4px;">
+      <span class="sec-n">01</span>
+      <span class="sec-t">Session Archive</span>
+      <div class="sec-line"></div>
+    </div>
+    <div id="log-list"><div class="empty">No sessions logged yet</div></div>
+  </div>
+
+  <!-- ══ DATA ══ -->
+  <div class="pane" id="tab-data">
+
+    <div class="sec-head" style="margin-top:4px;">
+      <span class="sec-n">01</span>
+      <span class="sec-t">Export Data</span>
+      <div class="sec-line"></div>
+    </div>
+    <div class="panel" style="margin-bottom:24px;">
+      <div class="c-tl"></div><div class="c-tr"></div><div class="c-bl"></div><div class="c-br"></div>
+      <div class="panel-bar">
+        <div class="panel-bar-dot" style="background-color:#40C878;box-shadow:0 0 6px rgba(64,200,120,0.6);"></div>
+        <span class="panel-bar-label">Save a Backup</span>
+      </div>
+      <div class="panel-body">
+        <p style="font-size:12px;color:#5A4E80;line-height:1.65;margin-bottom:16px;">Downloads all your data — weight logs, runs, sessions, fight record, and generated workouts — as a <code style="background:#1A0E3C;color:#B080FF;padding:1px 5px;border-radius:2px;font-size:11px;">.json</code> file. Save it to your Files app or iCloud Drive. Do this regularly.</p>
+        <button class="btn btn-g" onclick="exportData()" style="font-size:10px;padding:11px 22px;">Export Backup File</button>
+        <div id="export-msg" style="margin-top:10px;font-size:11px;color:#5A4E80;display:none;"></div>
+      </div>
+    </div>
+
+    <div class="sec-head">
+      <span class="sec-n">02</span>
+      <span class="sec-t">Import Data</span>
+      <div class="sec-line"></div>
+    </div>
+    <div class="panel" style="margin-bottom:24px;">
+      <div class="c-tl"></div><div class="c-tr"></div><div class="c-bl"></div><div class="c-br"></div>
+      <div class="panel-bar">
+        <div class="panel-bar-dot" style="background-color:#5090D8;box-shadow:none;"></div>
+        <span class="panel-bar-label">Restore from Backup</span>
+      </div>
+      <div class="panel-body">
+        <p style="font-size:12px;color:#5A4E80;line-height:1.65;margin-bottom:16px;">Select a previously exported <code style="background:#1A0E3C;color:#B080FF;padding:1px 5px;border-radius:2px;font-size:11px;">.json</code> backup file to restore all your data. This will replace your current data.</p>
+        <label style="display:inline-block;cursor:pointer;">
+          <span class="btn btn-b" style="font-size:10px;padding:11px 22px;display:inline-block;">Select Backup File</span>
+          <input type="file" id="import-file" accept=".json" style="display:none;width:auto;" onchange="importData(this)"/>
+        </label>
+        <div id="import-msg" style="margin-top:10px;font-size:11px;color:#5A4E80;display:none;"></div>
+      </div>
+    </div>
+
+    <div class="sec-head">
+      <span class="sec-n">03</span>
+      <span class="sec-t">Data Summary</span>
+      <div class="sec-line"></div>
+    </div>
+    <div class="panel">
+      <div class="c-tl"></div><div class="c-tr"></div><div class="c-bl"></div><div class="c-br"></div>
+      <div class="panel-body" id="data-summary">
+      </div>
+    </div>
+
+  </div>
+
+</div><!-- /app -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<script>
+const SK = 'shadowridge_v5';
+function load() {
+  try { const r = localStorage.getItem(SK); if (r) return JSON.parse(r); } catch(e) {}
+  return { weight:150, weightLog:[], runs:[], campStart:new Date().toISOString().split('T')[0],
+    record:{w:0,l:0,d:0}, fights:[], sessions:[], completed:{}, selectedDay:null, generated:{}, campWeek:1 };
+}
+function save() { try { localStorage.setItem(SK, JSON.stringify(S)); } catch(e) {} }
+let S = load();
+
+const SCHED = {
+  Mon: { label:'Run + Boxing', sub:'3mi jog AM · Coach boxing 6:15pm', am:'Morning aerobic jog · 3 miles', pm:'Boxing with coach · 6:15pm (fixed)', types:['run','boxing'], fixed:true, bag:false },
+  Tue: { label:'Run + Pull + Bag', sub:'3mi jog AM · Gym pull · Home bag PM', am:'Morning aerobic jog · 3 miles', pm:'Pull day (gym) + Bag work (home, evening)', types:['run','strength','bag'], fixed:false, bag:true },
+  Wed: { label:'Run + Boxing', sub:'3mi jog AM · Coach boxing 6:15pm', am:'Morning aerobic jog · 3 miles', pm:'Boxing with coach · 6:15pm (fixed)', types:['run','boxing'], fixed:true, bag:false },
+  Thu: { label:'Run + Push + Bag', sub:'3mi jog AM · Gym push · Home bag PM', am:'Morning aerobic jog · 3 miles', pm:'Push day (gym) + Bag work (home, evening)', types:['run','strength','bag'], fixed:false, bag:true },
+  Fri: { label:'Run + Full Bag', sub:'3mi jog AM · Full 6-round bag session', am:'Morning aerobic jog · 3 miles', pm:'Home bag work · full session', types:['run','bag'], fixed:false, bag:true },
+  Sat: { label:'MMA / Boxing', sub:'Coach session · 12:30pm', am:null, pm:'MMA/Boxing with coach · 12:30pm (fixed)', types:['boxing'], fixed:true, bag:false }
+};
+const DAYS = ['Mon','Tue','Wed','Thu','Fri','Sat'];
+const PHASES = ['Base Building','Technical Focus','Volume Up','Intensity Ramp','Sparring Heavy','Peak Week'];
+
+function showTab(id) {
+  document.querySelectorAll('.tab-btn').forEach((t,i) => t.classList.toggle('on', ['today','runs','schedule','progress','fights','log','data'][i] === id));
+  document.querySelectorAll('.pane').forEach(p => p.classList.remove('on'));
+  document.getElementById('tab-' + id).classList.add('on');
+  if (id === 'progress') renderProgress();
+  if (id === 'schedule') renderSchedule();
+  if (id === 'log') renderLog();
+  if (id === 'fights') renderFights();
+  if (id === 'runs') renderRuns();
+  if (id === 'data') renderDataSummary();
+}
+
+function updateHeader() {
+  const now = new Date();
+  const DW = ['SUN','MON','TUE','WED','THU','FRI','SAT'];
+  const MO = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
+  document.getElementById('hdr-date').textContent = `${DW[now.getDay()]} ${MO[now.getMonth()]} ${now.getDate()}`;
+  document.getElementById('hdr-record').textContent = `${S.record.w}·${S.record.l}·${S.record.d}`;
+  document.getElementById('hdr-weight').textContent = S.weight.toFixed(1);
+  const elapsed = Math.floor((now - new Date(S.campStart)) / 86400000);
+  const week = Math.min(6, Math.max(1, Math.floor(elapsed / 7) + 1));
+  S.campWeek = week; save();
+  const phase = PHASES[week - 1];
+  document.getElementById('hdr-week').textContent = week;
+  document.getElementById('hdr-phase').textContent = phase;
+  document.getElementById('d-week').textContent = week;
+  document.getElementById('d-phase').textContent = phase;
+  document.getElementById('cd-days').textContent = Math.max(0, 90 - elapsed);
+  document.getElementById('d-weight').textContent = S.weight.toFixed(1);
+  const wkSess = S.sessions.filter(s => s.week === week);
+  document.getElementById('d-sessions').textContent = `${wkSess.length}/8`;
+  const ws = new Date(now); ws.setDate(now.getDate() - now.getDay() + 1);
+  document.getElementById('d-miles').textContent = S.runs.filter(r => new Date(r.date) >= ws).reduce((a,r) => a + r.miles, 0).toFixed(1);
+}
+
+function logWeight() {
+  const v = parseFloat(document.getElementById('weight-in').value);
+  if (isNaN(v) || v < 130 || v > 165) return;
+  S.weight = v;
+  const today = new Date().toISOString().split('T')[0];
+  const i = S.weightLog.findIndex(e => e.date === today);
+  if (i >= 0) S.weightLog[i].weight = v; else S.weightLog.push({ date: today, weight: v });
+  S.weightLog = S.weightLog.slice(-60); save();
+  const diff = v - 145;
+  const el = document.getElementById('weight-status');
+  if (diff <= 0) { el.textContent = '✓ On weight — fight ready'; el.style.color = '#40C878'; }
+  else if (diff <= 3) { el.textContent = diff.toFixed(1) + ' lbs to cut'; el.style.color = '#80B8F8'; }
+  else { el.textContent = diff.toFixed(1) + ' lbs to cut — focus'; el.style.color = '#C06898'; }
+  document.getElementById('weight-in').value = '';
+  updateHeader();
+}
+
+function renderDayGrid() {
+  const dm = {0:null,1:'Mon',2:'Tue',3:'Wed',4:'Thu',5:'Fri',6:'Sat'};
+  const todayD = dm[new Date().getDay()];
+  document.getElementById('day-grid').innerHTML = DAYS.map(d => {
+    const key = 'w' + S.campWeek + '_' + d;
+    const done = S.completed[key];
+    const isToday = d === todayD;
+    const isActive = S.selectedDay === d;
+    const sc = SCHED[d];
+    const dots = sc.types.map(t => '<div class="dc-dot ' + t + '"></div>').join('');
+    let tag = '';
+    if (done) tag = '<span class="dc-tag" style="color:#40C878;">DONE</span>';
+    else if (isToday) tag = '<span class="dc-tag" style="color:#7048D0;">TODAY</span>';
+    return '<div class="day-cell ' + (isActive?'on ':' ') + (done?'done ':' ') + (isToday&&!isActive?'today':'') + '" onclick="selectDay(\'' + d + '\')">'
+      + '<span class="dc-name">' + d + '</span>'
+      + '<div class="dc-dots">' + dots + '</div>'
+      + tag
+      + '</div>';
+  }).join('');
+}
+
+function selectDay(day) { S.selectedDay = day; save(); renderDayGrid(); renderSession(); }
+
+function renderSession() {
+  const body = document.getElementById('sess-body');
+  const barLbl = document.getElementById('sess-bar-lbl');
+  const barRight = document.getElementById('sess-bar-right');
+  if (!S.selectedDay) {
+    barLbl.textContent = 'Session';
+    barRight.textContent = '';
+    body.innerHTML = '<div class="empty">Select a training day above</div>';
+    return;
+  }
+  const day = S.selectedDay;
+  const sc = SCHED[day];
+  const key = 'w' + S.campWeek + '_' + day;
+  const done = S.completed[key];
+  const gen = S.generated[key];
+
+  barLbl.textContent = day + ' — ' + sc.label;
+  barRight.textContent = done ? 'COMPLETE ✓' : '';
+  barRight.style.color = done ? '#40C878' : '#5A4E80';
+
+  const tagHtml = sc.types.map(t => '<span class="tag tag-' + t + '">' + t + '</span>').join('');
+  let html = '<div class="s-tags">' + tagHtml + '</div>';
+  html += '<div style="margin-bottom:14px;">';
+  if (sc.am) html += '<div class="sinfo-row"><span class="sinfo-lbl">AM</span><span>' + sc.am + '</span></div>';
+  html += '<div class="sinfo-row"><span class="sinfo-lbl">PM</span><span>' + sc.pm + '</span></div>';
+  if (sc.bag) html += '<div class="sinfo-row"><span class="sinfo-lbl">Bag</span><span>Separate home session · not on boxing coach days</span></div>';
+  html += '</div>';
+
+  if (gen) {
+    html += '<div class="round-list">';
+    gen.rounds.forEach(function(r, i) {
+      const isRest = r.type === 'rest';
+      html += '<div class="round-row' + (isRest?' is-rest':'') + '">'
+        + '<div class="round-n"><span>' + (isRest?'REST':(i+1)) + '</span></div>'
+        + '<div class="round-b"><div class="round-title">' + r.name + '</div><div class="round-detail">' + r.detail + '</div></div>'
+        + (r.duration ? '<div class="round-dur">' + r.duration + '</div>' : '')
+        + '</div>';
+    });
+    html += '</div>';
+    if (gen.notes) html += '<div class="s-note">' + gen.notes + '</div>';
+    if (!done) {
+      html += '<div class="act-row">'
+        + '<button class="btn btn-g" onclick="markDone(\'' + key + '\',\'' + day + '\')">Mark Complete</button>'
+        + '<button class="btn btn-ghost" onclick="regen(\'' + key + '\',\'' + day + '\')">Regenerate</button>'
+        + '</div>';
+    } else {
+      html += '<div class="done-mark">✓ Session logged — ' + new Date().toLocaleDateString() + '</div>';
+    }
+  } else {
+    html += '<button class="gen-btn" id="gen-btn" onclick="genSession(\'' + key + '\',\'' + day + '\')">Generate ' + day + ' Session</button>';
+  }
+  body.innerHTML = html;
+}
+
+async function genSession(key, day) {
+  const btn = document.getElementById('gen-btn'); if (btn) btn.disabled = true;
+  document.getElementById('sess-body').innerHTML += '<div class="loading">Channeling shadow energy</div>';
+  const sc = SCHED[day];
+  const phase = PHASES[Math.min(S.campWeek - 1, 5)];
+  const diff = (S.weight - 145).toFixed(1);
+  const prompt = 'You are the boxing coach for SHADOWRIDGE, an elite amateur fighter chasing 5-0.\n\nFIGHTER: ' + S.weight + 'lbs → 145 target (' + (diff > 0 ? diff + ' to cut' : 'on weight') + ') · 5\'8" · Week ' + S.campWeek + ': ' + phase + '\n\nDAY: ' + day + ' — Types: ' + sc.types.join(', ') + '\nCoach-fixed: ' + (sc.fixed ? 'YES — 20min HOME PREP only before coach session' : 'NO — full self-directed') + '\nBag work: ' + (sc.bag ? 'YES' : 'NO') + '\n\nHOME: Heavy bag, slip bag (pendulum/ball-on-string), agility ladder, 10lb dumbbells, dip bars, TerraCore, jump rope\nGYM Tue/Thu: Pull-up bar, lat pulldown, seated row, squat rack, bench press, dumbbells to 100lb, leg press, leg extension, cables\nTENNIS BALL: Pendulum slip & counter, bounce & circle footwork, floor dribble ladder, wall burnout\n\nRULES:\n- Mon/Wed/Sat coach days: 20min HOME PREP only. Shadow, slip bag, footwork. No heavy bag.\n- Tue/Thu bag: 3-4 short rounds post-gym only.\n- Fri: Full 6-round bag session + tennis ball rest drills.\n- Strength days: sets as rounds, specific weights for 150lb athlete.\n- Combos: 1=jab 2=cross 3=L.hook 4=R.hook 5=L.upper 6=R.upper\n- Week ' + S.campWeek + ' (' + phase + '): scale intensity. Be specific — real combos, real weights, real cues.\n\nReturn ONLY valid JSON:\n{"rounds":[{"type":"work|rest","name":"string","detail":"specific","duration":"string"}],"notes":"1-2 sharp cues"}\n8-10 rounds.';
+  try {
+    const resp = await fetch('https://api.anthropic.com/v1/messages', {
+      method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({ model:'claude-sonnet-4-20250514', max_tokens:1000, messages:[{role:'user',content:prompt}] })
+    });
+    const data = await resp.json();
+    const text = data.content.filter(function(b){return b.type==='text';}).map(function(b){return b.text;}).join('');
+    S.generated[key] = JSON.parse(text.replace(/```json|```/g,'').trim());
+    save();
+  } catch(e) {
+    S.generated[key] = { rounds:[
+      {type:'work',name:'Jump rope',detail:'3×2min alternating feet. Guard up. Nose breathing throughout.',duration:'6 min'},
+      {type:'rest',name:'Rest',detail:'Bounce & circle — tennis ball, boxing stance, lateral movement.',duration:'1 min'},
+      {type:'work',name:'Shadow box',detail:'1-2 → pivot left · 1-2 → pivot right · 1-1-2 → angle. Feet move after every combination.',duration:'3 min'},
+      {type:'rest',name:'Rest',detail:'Wall burnout — throw ball, catch, re-throw. Guard hand stays up.',duration:'1 min'},
+      {type:'work',name:'Heavy bag — jab & move',detail:'Jab head, jab body, alternate. Circle off after every punch. Never plant.',duration:'3 min'},
+      {type:'rest',name:'Rest',detail:'Pendulum slip — slip left fire right. Slip right fire hook.',duration:'1 min'},
+      {type:'work',name:'Heavy bag — combos',detail:'1-2 → circle · 1-2-3 → roll · 1-2 body-head. Drive from the back foot.',duration:'3 min'},
+      {type:'work',name:'Finisher',detail:'90sec all-out volume. Then 90sec best combo only — max snap.',duration:'3 min'}
+    ], notes:'Move to punch. Punch to move. A planted fighter is a hittable fighter.' };
+    save();
+  }
+  renderSession();
+}
+
+function regen(key, day) { delete S.generated[key]; save(); renderSession(); setTimeout(function(){genSession(key,day);},80); }
+
+function markDone(key, day) {
+  S.completed[key] = true;
+  const sc = SCHED[day];
+  if (!S.sessions.find(function(s){return s.key===key;}))
+    S.sessions.push({ date: new Date().toISOString().split('T')[0], day:day, week:S.campWeek, label:sc.label, types:sc.types, key:key });
+  save(); renderDayGrid(); renderSession(); updateHeader();
+}
+
+function parseRunPaste() {
+  const raw = document.getElementById('run-paste').value.trim(); if (!raw) return;
+  const milesM = raw.match(/(\d+\.?\d*)\s*(mi|mile|miles)/i);
+  const timeM  = raw.match(/\b(\d{1,2}:\d{2}(?::\d{2})?)\b/);
+  const paceM  = raw.match(/(\d+:\d{2})\s*\/\s*mi/i);
+  const miles  = milesM ? parseFloat(milesM[1]) : 0;
+  if (miles > 0) {
+    document.getElementById('run-miles').value = miles;
+    if (timeM) document.getElementById('run-time').value = timeM[1];
+    if (paceM) document.getElementById('run-pace').value = paceM[1] + '/mi';
+    document.getElementById('run-paste').value = '';
+    logRunManual();
+  } else { aiParseRun(raw); }
+}
+async function aiParseRun(raw) {
+  try {
+    const resp = await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:100,messages:[{role:'user',content:'Extract run stats. Return ONLY JSON: {"miles":number,"time":"string or null","pace":"string or null"}. Text: "'+raw.slice(0,300)+'"'}]})});
+    const data = await resp.json();
+    const parsed = JSON.parse(data.content.filter(function(b){return b.type==='text';}).map(function(b){return b.text;}).join('').replace(/```json|```/g,'').trim());
+    if (parsed.miles) {
+      document.getElementById('run-miles').value = parsed.miles;
+      if (parsed.time) document.getElementById('run-time').value = parsed.time;
+      if (parsed.pace) document.getElementById('run-pace').value = parsed.pace;
+      document.getElementById('run-paste').value = '';
+      logRunManual();
+    }
+  } catch(e) {}
+}
+function logRunManual() {
+  const miles = parseFloat(document.getElementById('run-miles').value);
+  if (isNaN(miles) || miles <= 0) return;
+  const time = document.getElementById('run-time').value.trim();
+  const pace = document.getElementById('run-pace').value.trim();
+  const dateRaw = document.getElementById('run-date-in').value.trim();
+  S.runs.push({ miles:miles, time:time, pace:pace, date: dateRaw || new Date().toISOString().split('T')[0], id:Date.now() });
+  S.runs = S.runs.slice(-90); save();
+  ['run-miles','run-time','run-pace','run-date-in'].forEach(function(id){document.getElementById(id).value='';});
+  renderRuns(); updateHeader();
+}
+
+let runChart = null;
+function renderRuns() {
+  const c = document.getElementById('run-history');
+  if (!S.runs.length) { c.innerHTML = '<div class="empty">No runs logged yet</div>'; return; }
+  c.innerHTML = [...S.runs].reverse().slice(0,14).map(function(r){
+    return '<div class="entry run">'
+      + '<span style="font-family:\'Space Grotesk\',sans-serif;font-weight:700;font-size:9px;letter-spacing:0.12em;text-transform:uppercase;color:#5A4E80;">' + r.date + '</span>'
+      + '<div class="run-stats">'
+      + '<div class="r-stat"><span class="r-val">' + r.miles.toFixed(2) + '</span><span class="r-lbl">miles</span></div>'
+      + (r.time ? '<div class="r-stat"><span class="r-val">' + r.time + '</span><span class="r-lbl">time</span></div>' : '')
+      + (r.pace ? '<div class="r-stat"><span class="r-val" style="font-size:15px;">' + r.pace + '</span><span class="r-lbl">pace</span></div>' : '')
+      + '</div></div>';
+  }).join('');
+  const canvas = document.getElementById('run-chart');
+  const entries = S.runs.slice(-14).filter(function(r){return r.pace;});
+  if (!entries.length) { canvas.style.display = 'none'; return; }
+  canvas.style.display = 'block';
+  const parsePace = function(p){ const m=p.match(/(\d+):(\d{2})/); return m?parseInt(m[1])+parseInt(m[2])/60:null; };
+  if (runChart) runChart.destroy();
+  runChart = new Chart(canvas, { type:'line',
+    data:{ labels:entries.map(function(r){return r.date.slice(5);}), datasets:[{
+      data:entries.map(function(r){return parsePace(r.pace);}),
+      borderColor:'#5090D8', backgroundColor:'rgba(80,144,216,0.06)',
+      tension:0.3, pointRadius:3, borderWidth:2, pointBackgroundColor:'#80B8F8'
+    }]},
+    options:{ responsive:true, maintainAspectRatio:false, plugins:{legend:{display:false}},
+      scales:{ x:{ticks:{color:'#3A3558',font:{size:9}},grid:{color:'rgba(46,40,80,0.5)'}},
+        y:{reverse:true, ticks:{color:'#3A3558',font:{size:9},callback:function(v){const m=Math.floor(v);const s=Math.round((v-m)*60);return m+':'+s.toString().padStart(2,'0');}}, grid:{color:'rgba(46,40,80,0.5)'}}}}});
+}
+
+function renderSchedule() {
+  document.getElementById('sched-list').innerHTML = DAYS.map(function(day) {
+    const sc = SCHED[day];
+    const tagHtml = sc.types.map(function(t){return '<span class="tag tag-'+t+'">'+t+'</span>';}).join('');
+    return '<div class="sched-card">'
+      + '<button class="sched-toggle" onclick="toggleSched(this)">'
+      + '<div><span class="sched-day">' + day + ' — ' + sc.label + '</span>'
+      + '<div style="display:flex;gap:5px;margin-top:6px;">' + tagHtml + '</div></div>'
+      + '<span class="sched-icon">+</span>'
+      + '</button>'
+      + '<div class="sched-body">'
+      + (sc.am ? '<div class="sched-line"><span class="sched-lbl">AM</span><span>' + sc.am + '</span></div>' : '')
+      + '<div class="sched-line"><span class="sched-lbl">PM</span><span>' + sc.pm + '</span></div>'
+      + (sc.fixed ? '<div class="sched-line"><span class="sched-lbl">Note</span><span style="color:#8A70C0;">Coach-led · home prep only generated</span></div>' : '')
+      + (sc.bag ? '<div class="sched-line"><span class="sched-lbl">Bag</span><span style="color:#8A70C0;">Separate home session · NOT on boxing coach days</span></div>' : '')
+      + '<div style="margin-top:10px;"><button class="btn btn-ghost" onclick="showTab(\'today\');selectDay(\''+day+'\')">Generate session →</button></div>'
+      + '</div></div>';
+  }).join('');
+}
+function toggleSched(btn) {
+  const body = btn.nextElementSibling; const icon = btn.querySelector('.sched-icon');
+  body.classList.toggle('open'); icon.classList.toggle('open');
+  icon.textContent = body.classList.contains('open') ? '×' : '+';
+}
+
+let wChart = null;
+function renderProgress() {
+  const wk = S.campWeek;
+  const wkSess = S.sessions.filter(function(s){return s.week===wk;});
+  let box=0,str=0,run=0,bag=0;
+  wkSess.forEach(function(s){
+    if (s.types.includes('boxing')||s.types.includes('mma')) box++;
+    if (s.types.includes('strength')) str++;
+    if (s.types.includes('run')) run++;
+    if (s.types.includes('bag')) bag++;
+  });
+  document.getElementById('p-sess').textContent = wkSess.length + '/8';
+  const now = new Date(); const ws = new Date(now); ws.setDate(now.getDate()-now.getDay()+1);
+  document.getElementById('p-miles').textContent = S.runs.filter(function(r){return new Date(r.date)>=ws;}).reduce(function(a,r){return a+r.miles;},0).toFixed(1);
+  document.getElementById('p-total').textContent = S.sessions.length;
+  let streak=0;
+  for (let i=0;i<30;i++){const d=new Date(now);d.setDate(d.getDate()-i);const ds=d.toISOString().split('T')[0];if(S.sessions.find(function(s){return s.date===ds;}))streak++;else if(i>0)break;}
+  document.getElementById('p-streak').textContent = streak;
+  [['box',box,4],['str',str,2],['run',run,5],['bag',bag,2]].forEach(function(a){
+    document.getElementById('pv-'+a[0]).textContent = a[1]+'/'+a[2];
+    document.getElementById('pf-'+a[0]).style.width = Math.min(100,a[1]/a[2]*100)+'%';
+  });
+  const canvas = document.getElementById('weight-chart');
+  const entries = S.weightLog.slice(-14);
+  if (!entries.length) { canvas.style.display='none'; return; }
+  canvas.style.display='block';
+  if (wChart) wChart.destroy();
+  wChart = new Chart(canvas, { type:'line',
+    data:{ labels:entries.map(function(e){return e.date.slice(5);}), datasets:[
+      {data:entries.map(function(e){return e.weight;}),borderColor:'#7048D0',backgroundColor:'rgba(80,48,176,0.08)',tension:0.3,pointRadius:3,borderWidth:2,pointBackgroundColor:'#9060F0'},
+      {data:Array(entries.length).fill(145),borderColor:'#C06898',borderDash:[4,4],pointRadius:0,borderWidth:1}
+    ]},
+    options:{ responsive:true, maintainAspectRatio:false, plugins:{legend:{display:false}},
+      scales:{ x:{ticks:{color:'#3A3558',font:{size:9}},grid:{color:'rgba(46,40,80,0.5)'}},
+        y:{min:138,max:Math.max(155,Math.ceil(Math.max(...entries.map(function(e){return e.weight;})))+2),ticks:{color:'#3A3558',font:{size:9}},grid:{color:'rgba(46,40,80,0.5)'}}}}});
+}
+
+function logFight() {
+  const opp=document.getElementById('f-opp').value.trim();
+  const res=document.getElementById('f-result').value;
+  if (!opp||!res) return;
+  S.fights.push({opp:opp,res:res,date:document.getElementById('f-date').value.trim(),method:document.getElementById('f-method').value.trim(),event:document.getElementById('f-event').value.trim(),notes:document.getElementById('f-notes').value.trim(),id:Date.now()});
+  if (res==='W') S.record.w++; else if (res==='L') S.record.l++; else S.record.d++;
+  save(); updateHeader();
+  ['f-opp','f-date','f-method','f-event'].forEach(function(id){document.getElementById(id).value='';});
+  document.getElementById('f-result').value=''; document.getElementById('f-notes').value='';
+  renderFights();
+}
+function renderFights() {
+  ['r-w','r-l','r-d'].forEach(function(id,i){document.getElementById(id).textContent=[S.record.w,S.record.l,S.record.d][i];});
+  document.getElementById('hdr-record').textContent = S.record.w+'·'+S.record.l+'·'+S.record.d;
+  const c=document.getElementById('fight-history');
+  if (!S.fights.length) { c.innerHTML='<div class="empty">No fights logged yet</div>'; return; }
+  c.innerHTML=[...S.fights].reverse().map(function(f){
+    return '<div class="entry fight">'
+      +'<div class="e-badge '+f.res+'">'+f.res+'</div>'
+      +'<div><div class="e-name">'+f.opp+'</div>'
+      +'<div class="e-meta">'+[f.date,f.method,f.event].filter(Boolean).join(' · ')+'</div>'
+      +(f.notes?'<div style="font-size:11px;color:#5A4E80;margin-top:3px;font-style:italic;">'+f.notes+'</div>':'')
+      +'</div></div>';
+  }).join('');
+}
+
+function renderLog() {
+  const c=document.getElementById('log-list');
+  if (!S.sessions.length) { c.innerHTML='<div class="empty">No sessions logged yet</div>'; return; }
+  c.innerHTML=[...S.sessions].reverse().map(function(s){
+    return '<div class="entry log" style="align-items:flex-start;">'
+      +'<div style="flex:1;">'
+      +'<div class="e-name">'+s.day+' — '+s.label+'</div>'
+      +'<div style="display:flex;gap:4px;margin-top:5px;">'+s.types.map(function(t){return '<span class="tag tag-'+t+'">'+t+'</span>';}).join('')+'</div>'
+      +'</div>'
+      +'<div style="text-align:right;flex-shrink:0;">'
+      +'<div style="font-family:\'Space Grotesk\',sans-serif;font-weight:700;font-size:9px;letter-spacing:0.12em;text-transform:uppercase;color:#5A4E80;">Week '+s.week+'</div>'
+      +'<div style="font-size:10px;color:#3A3558;margin-top:2px;">'+s.date+'</div>'
+      +'</div></div>';
+  }).join('');
+}
+
+/* ── EXPORT ── */
+function exportData() {
+  const exportObj = {
+    version: 'shadowridge_v5',
+    exportDate: new Date().toISOString(),
+    data: S
+  };
+  const blob = new Blob([JSON.stringify(exportObj, null, 2)], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  const dateStr = new Date().toISOString().split('T')[0];
+  a.href = url;
+  a.download = 'shadowridge-backup-' + dateStr + '.json';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+  const msg = document.getElementById('export-msg');
+  msg.textContent = '✓ Backup saved — ' + dateStr + '. Store it in iCloud Drive or Files app.';
+  msg.style.color = '#40C878';
+  msg.style.display = 'block';
+}
+
+/* ── IMPORT ── */
+function importData(input) {
+  const file = input.files[0];
+  if (!file) return;
+  const msg = document.getElementById('import-msg');
+  const reader = new FileReader();
+  reader.onload = function(e) {
+    try {
+      const parsed = JSON.parse(e.target.result);
+      // Accept both wrapped export format and raw state
+      const incoming = parsed.data || parsed;
+      // Validate it looks like our data
+      if (typeof incoming.weight === 'undefined' && !incoming.record) {
+        throw new Error('Invalid backup file');
+      }
+      // Merge carefully — keep structure intact
+      S = Object.assign({
+        weight: 150, weightLog: [], runs: [], campStart: new Date().toISOString().split('T')[0],
+        record: {w:0,l:0,d:0}, fights: [], sessions: [], completed: {}, selectedDay: null, generated: {}, campWeek: 1
+      }, incoming);
+      save();
+      updateHeader();
+      renderDayGrid();
+      renderSession();
+      renderDataSummary();
+      msg.textContent = '✓ Data restored successfully — ' + (incoming.sessions ? incoming.sessions.length : 0) + ' sessions, ' + (incoming.runs ? incoming.runs.length : 0) + ' runs, fight record ' + (incoming.record ? incoming.record.w + '-' + incoming.record.l + '-' + incoming.record.d : '0-0-0') + '.';
+      msg.style.color = '#40C878';
+      msg.style.display = 'block';
+    } catch(err) {
+      msg.textContent = '✗ Could not read file. Make sure it\'s a Shadowridge backup .json file.';
+      msg.style.color = '#C06898';
+      msg.style.display = 'block';
+    }
+    input.value = '';
+  };
+  reader.readAsText(file);
+}
+
+/* ── DATA SUMMARY ── */
+function renderDataSummary() {
+  const el = document.getElementById('data-summary');
+  if (!el) return;
+  const totalMiles = S.runs.reduce(function(a, r) { return a + r.miles; }, 0);
+  const avgWeight = S.weightLog.length
+    ? (S.weightLog.reduce(function(a, e) { return a + e.weight; }, 0) / S.weightLog.length).toFixed(1)
+    : S.weight.toFixed(1);
+  const campDays = Math.floor((new Date() - new Date(S.campStart)) / 86400000);
+  const rows = [
+    ['Camp started', S.campStart],
+    ['Days in camp', campDays + ' days'],
+    ['Total sessions', S.sessions.length],
+    ['Total runs logged', S.runs.length],
+    ['Total miles run', totalMiles.toFixed(1) + ' mi'],
+    ['Weight entries', S.weightLog.length],
+    ['Avg logged weight', avgWeight + ' lbs'],
+    ['Fights on record', S.fights.length],
+    ['Fight record', S.record.w + 'W · ' + S.record.l + 'L · ' + S.record.d + 'D'],
+    ['Generated sessions', Object.keys(S.generated).length],
+    ['Storage key', SK],
+  ];
+  el.innerHTML = rows.map(function(r) {
+    return '<div style="display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-bottom:1px solid rgba(100,55,220,0.15);">'
+      + '<span style="font-family:\'Space Grotesk\',sans-serif;font-weight:700;font-size:9px;letter-spacing:0.16em;text-transform:uppercase;color:#5A4E80;">' + r[0] + '</span>'
+      + '<span style="font-family:\'Bebas Neue\',sans-serif;font-size:16px;letter-spacing:0.06em;color:#EDE8FF;">' + r[1] + '</span>'
+      + '</div>';
+  }).join('') + '<div style="padding-top:14px;font-size:10px;color:#3A3558;line-height:1.6;">Data is stored locally in your browser. Export regularly to keep a backup, especially before clearing browser cache or switching devices.</div>';
+}
+
+
+updateHeader();
+renderDayGrid();
+renderSchedule();
+renderFights();
+const dm={0:null,1:'Mon',2:'Tue',3:'Wed',4:'Thu',5:'Fri',6:'Sat'};
+const todayD=dm[new Date().getDay()];
+if (todayD&&!S.selectedDay){S.selectedDay=todayD;save();}
+if (S.selectedDay){renderDayGrid();renderSession();}
+</script>
+</body>
+</html>
